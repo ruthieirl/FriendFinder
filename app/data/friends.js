@@ -1,0 +1,164 @@
+//Data for other friends
+
+var friends = [
+{
+  "name":"Lauren",
+  "photo":"https://scontent.fewr1-2.fna.fbcdn.net/v/t1.0-9/11011290_10153284939857250_8229724883103203415_n.jpg?oh=4893079007d4abd9a6f80e2bc72dd11a&oe=5A784BE1",
+  "scores":[
+      1,
+      5,
+      2,
+      2,
+      1,
+      5,
+      4,
+      1,
+      2,
+      5
+    ]
+},
+{
+  "name":"Kelly",
+  "photo":"https://scontent.fewr1-2.fna.fbcdn.net/v/t1.0-9/23336_434633201420_3402381_n.jpg?oh=b1968fc965fa76a919f2af29f136b8eb&oe=5AAF14DA",
+  "scores":[
+      5,
+      1,
+      4,
+      4,
+      5,
+      1,
+      2,
+      5,
+      4,
+      1
+    ]
+},
+{
+  "name":"Kaya",
+  "photo":"https://scontent.fewr1-2.fna.fbcdn.net/v/t1.0-9/11800324_10153469536707910_7578414721018096538_n.jpg?oh=e6b8f59d345c66516cbfc2f409225cd0&oe=5AB03C05",
+  "scores":[
+      4,
+      1,
+      5,
+      3,
+      5,
+      4,
+      4,
+      4,
+      4,
+      3
+    ]
+},
+{
+  "name":"Celly",
+  "photo":"https://scontent.fewr1-2.fna.fbcdn.net/v/t1.0-9/21764885_10155830984887171_6768183962956704892_n.jpg?oh=2ce2ef19ccf2541290bae9b6d0819683&oe=5A7A2102",
+  "scores":[
+      1,
+      2,
+      3,
+      4,
+      5,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+},
+{
+  "name":"Katie",
+  "photo":"https://scontent.fewr1-2.fna.fbcdn.net/v/t1.0-9/14570242_10154464066901259_5332381259332603459_n.jpg?oh=cb0436bf6239e0c7c1bf138eb156eeb9&oe=5A7173EB",
+  "scores":[
+      5,
+      4,
+      3,
+      2,
+      1,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+},
+{
+  "name":"Bo",
+  "photo":"https://scontent.fewr1-2.fna.fbcdn.net/v/t1.0-9/16998100_10210482152109162_4578832883860760294_n.jpg?oh=6485389128053cbfc0ca12b7b8f4c152&oe=5AA92B30",
+  "scores":[
+      5,
+      4,
+      4,
+      4,
+      5,
+      1,
+      3,
+      2,
+      2,
+      5
+    ]
+},
+{
+  "name":"Daryl",
+  "photo":"https://scontent.fewr1-2.fna.fbcdn.net/v/t1.0-9/19420661_10209641155293867_7491036225808221565_n.jpg?oh=35db9a313f2a0eb189ba128bfb5a7d1e&oe=5A718C62",
+  "scores":[
+      4,
+      3,
+      4,
+      2,
+      5,
+      2,
+      1,
+      5,
+      4,
+      2
+    ]
+},
+{
+  "name":"Tony",
+  "photo":"https://scontent.fewr1-2.fna.fbcdn.net/v/t1.0-9/10365919_10153170134842121_7462420886699679675_n.jpg?oh=1778ade1686911c86721d87e85f53a0b&oe=5AAD43A9",
+  "scores":[
+      3,
+      1,
+      4,
+      4,
+      5,
+      1,
+      2,
+      5,
+      4,
+      5
+    ]
+},
+{
+  "name":"Jayson",
+  "photo":"https://scontent.fewr1-2.fna.fbcdn.net/v/t1.0-9/21370945_10159379144200717_2400386984327724246_n.jpg?oh=98a07a49ffa78999bb9875ac41f6e997&oe=5A794D90",
+  "scores":[
+      5,
+      4,
+      4,
+      3,
+      5,
+      3,
+      2,
+      2,
+      4,
+      5
+    ]
+},
+{
+  "name":"Esteban",
+  "photo":"https://scontent.fewr1-2.fna.fbcdn.net/v/t1.0-9/15965562_10154323510551313_2921663977407838741_n.jpg?oh=5c573e1be46853cbf630ddce715a0d07&oe=5A661823",
+  "scores":[
+      4,
+      3,
+      5,
+      2,
+      3,
+      4,
+      5,
+      5,
+      3,
+      2
+    ]
+}
+];
