@@ -17,6 +17,12 @@
 		    border-radius: 6px;
 		    border: 1px solid #ccc;  
 		}
+		.modal-content {
+			border: 2px solid #5bc0de;
+		}
+		.blue {
+			color: #5bc0de;
+		}
 	</style>
 </head>
 <body>
@@ -153,8 +159,38 @@
 		            <option value="5">5 (Strongly Agree)</option>
 		      	</select>
             </div><!--form-group-->
-            <button type="button" class="btn btn-info btn-block"><span class="glyphicon glyphicon-user"></span> Find a Friend</button>
+            <button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span> Find a Friend</button>
 		</div><!--jumbotron-->
 	</div><!--container-->
+
+	<!--modal for displaying friend match-->
+	<div id="myModal" class="modal fade">
+	    <div class="modal-dialog">
+	        <div class="modal-content">
+	            <div class="modal-header">
+	                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	                <h3 class="modal-title text-center blue">Did We Just Become Best Friends?</h3>
+	            </div><!--modal-header-->
+	            <div class="modal-body">
+	                <p class="text-center">The peanut butter to your jelly.</p>
+	                <p class="text-center">The lime to your Corona.</p>
+	                <p class="text-center">How did you make it passed breakfast without knowing the bacon to your eggs?</p>
+	                <p class="text-center">You should have <strong>BEEN</strong> hanging with</p>
+	                <div id="" class="text-center"></div>
+	                <div id="" class="text-center"></div>
+	                <p class="text-center">Clearly, a match made in Friend Finder Heaven.</p>
+	            </div><!--modal-body-->
+	            <div class="modal-footer">
+	                <button type="button" class="btn btn-info btn-block" data-dismiss="modal" ><span class="glyphicon glyphicon-remove-circle"> CLOSE</span></button>
+	            </div><!--modal-footer-->
+	        </div><!--modal-content-->
+	    </div><!--modal-dialog-->
+	</div><!--myModal-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		
+	</script>
 </body>
 </html>

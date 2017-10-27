@@ -50,7 +50,8 @@ module.exports = function(app) {
 			}
 		}
 		res.JSON(pickedFriend);
-		console.log(pickedFriend);
+		console.log(pickedFriend.name);
+		console.log(pickedFriend.photo);
 	});
 
 };
