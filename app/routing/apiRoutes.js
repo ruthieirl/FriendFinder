@@ -2,6 +2,7 @@
 var path = require("path");
 var friends = require("../data/friends.js");
 
+
 //Routes
 module.exports = function(app) {
 
@@ -16,10 +17,12 @@ module.exports = function(app) {
 	app.post("/api/friends", function(req, res) {
 
 		var newSurvey = req.body;
+		
+		console.log(newSurvey);
 
 		var newFriendArray = [];
 		
-		for (var i = 0; i < friends.length; i ++) {
+		for (var i = 0; i < friends.length; i++) {
 			var scoreDifference = 0;
 
 			for (var k = 0; k < friends[i].scores.length; k++) {
@@ -29,9 +32,11 @@ module.exports = function(app) {
 
 			newFriendArray.push({
 				name: friends[i].name,
-				picture: friends[i].picture,
+				photo: friends[i].photo,
 				totalDiff: scoreDifference,
 			});
+			console.log(friends[i].name);
+			console.log(friends[i].photo)
 		}	
 	
 		var highestScore = 50;
@@ -50,6 +55,7 @@ module.exports = function(app) {
 			}
 		}
 		res.JSON(pickedFriend);
+		friends.push(newSurvey);
 		console.log(pickedFriend.name);
 		console.log(pickedFriend.photo);
 	});
