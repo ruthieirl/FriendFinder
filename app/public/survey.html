@@ -159,7 +159,7 @@
 		            <option value="5">5 (Strongly Agree)</option>
 		      	</select>
             </div><!--form-group-->
-            <button id="submitButton" type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span> Find a Friend</button>
+            <button id="submit" type="submit" class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-user"></span> Find a Friend</button>
 		</div><!--jumbotron-->
 	</div><!--container-->
 
@@ -176,8 +176,8 @@
 	                <p class="text-center">The lime to your Corona.</p>
 	                <p class="text-center">How did you make it passed breakfast without knowing the bacon to your eggs?</p>
 	                <p class="text-center">You should have <strong>BEEN</strong> hanging with</p>
-	                <div id="" class="text-center"></div>
-	                <div id="" class="text-center"></div>
+	                <img id="matchPhoto" class="thumbnail text-center img-responsive" />
+	                <h3 id="matchName" class="text-center blue"></h3>
 	                <p class="text-center">Clearly, a match made in Friend Finder Heaven.</p>
 	            </div><!--modal-body-->
 	            <div class="modal-footer">
@@ -189,43 +189,46 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--NOTHING BELOW THIS WORKS-->
 	<script type="text/javascript">
-		//When th esubmit button is clicked
-		$("submitButton").on("click", function(event) {
+		//When the submit button is clicked
+		$("#submit").on("click", function(event) {
+			console.log("boom");
 			//stops page from reloading
 			event.preventDefault();
+			console.log("wtf");
 
 			//put user input into an object
 			var userInput = {
-				name: $("#name").val().trim(),
-				photo: $("#photo").val().trim(),
-				scores: [
-					$("#q1").val().trim(),
-					$("#q2").val().trim(),
-					$("#q3").val().trim(),
-					$("#q4").val().trim(),
-					$("#q5").val().trim(),
-					$("#q6").val().trim(),
-					$("#q7").val().trim(),
-					$("#q8").val().trim(),
-					$("#q9").val().trim(),
-					$("#q10").val().trim()
-				]
-			};
+	    		name: $("#name").val().trim(),
+	    		photo: $("#photo").val().trim(),
+	    		scores: [
+	    			$("#q1").val().trim(), 
+	    			$("#q2").val().trim(), 
+	    			$("#q3").val().trim(), 
+	    			$("#q4").val().trim(), 
+	    			$("#q5").val().trim(), 
+	    			$("#q6").val().trim(), 
+	    			$("#q7").val().trim(), 
+	    			$("#q8").val().trim(),
+	    			$("#q9").val().trim(),
+	    			$("#q10").val().trim() 
+	    			]
+	    	};
 
 			console.log(userInput);
-
-			var currentURL = window.location.origin;
 
 			$.post("/api/friends", userInput)
 			.done(function(data) {
 
-				$("#matchName").text(data.name);
-				$("#matchPhoto").attr("scr", data.photo);
+				//$("myModal").modal("toggle");
+				$("#matchName").text(data[0].name);
+				$("#matchPhoto").attr("scr", data[0].photo);
 				
-			})
+			});
 
-		})
+		});
 	</script>
+	
 </body>
 </html>

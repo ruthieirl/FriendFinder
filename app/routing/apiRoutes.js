@@ -2,20 +2,21 @@
 var path = require("path");
 var friends = require("../data/friends.js");
 
-
 //Routes
 module.exports = function(app) {
-
+	
 	//create an api.get route to display JSON of all possible friends
-	app.get("/api/friends", function(req, res) {
-		res.JSON(friends);
-		//console.log(friends);
+	app.get('/api/friends', function(req, res) {
+		res.json(friends);
+		console.log(friends);
+		//BREAKS RIGHT HERE. I GET AN EMPTY ARRAY FOR MY FRIENDS.
 	});
 
 	//create an api.post route to handle incoming survey results
 	//handle compatibility logic here
+	//NONE OF THIS RUNS SO I DON'T KNOW IF ANY OF IT WORKS
 	app.post("/api/friends", function(req, res) {
-
+		console.log("help");
 		var newSurvey = req.body;
 		
 		console.log(newSurvey);
@@ -47,6 +48,7 @@ module.exports = function(app) {
 			}
 		}
 
+		console.log(highestScore);
 		var pickedFriend = {};
 
 		for (var i = 0; i < newFriendArray.length; i++) {
